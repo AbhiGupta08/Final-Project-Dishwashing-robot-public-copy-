@@ -1,0 +1,70 @@
+int userInput ()
+{
+    bool set = false;
+    int washRating = 0;
+    while (SensorValue[S1] == 0)
+    {}
+    time1[T1] = 0;
+    displayString (1, "Please insert adjust the wash rating based on how dirty the plates are");
+    displayString (2, "RIGHT BUTTON - increase the rating (3 is the MAX)");
+    displayString (3, "LEFT BUTTON - lower the rating (1 is the MIN)");
+    if (time[T1] >= 6000;)
+        displayString (5, "System shutting down......");
+        // shut down procedure
+    while (set == false)
+    {
+        if (getButtonPress(buttonRight) == 1)
+            washRating ++;
+            displayString (4, "Current wash rating = %f", washRating);
+        else if (getButtonPress(buttonLeft) == 1)
+            washRating --;
+            displayString (4, "Current wash rating = %f", washRating);
+        else if (getButtonPress(buttonRight) == 1)
+            set = true;
+        
+        if (washRating > 3)
+            washRating = 3;
+        else if (washRating < 1)
+            washRating = 1;
+    }
+    return washRating;
+}
+
+bool dropPlate ()
+{
+    bool dropped = false;
+    nMotorEncoder [motor A] = 0;
+    motor [motorA] = INTSPD;
+    while (nMotorEncoder[motorA] < 120 )
+    {}
+    motor[motor A] = 0;
+    if (SensorValue [S1] == 1)
+        dropped = true;
+    motor [motor A] = -INTSPD;
+    while (nMotorEncoder[motor A] > -60)
+    {}
+    motor [motor A] = 0; 
+
+    return dropped;
+}
+
+//CENTERING THE PLATE
+bool centerPlate ()
+{
+    bool center = true;
+    time1 [T1] = 0;
+    float time = 0;
+    while (time < 5000)
+    {}
+    time = T1;
+    nMotorEncoder [motor C] = nMotorEncoder [motor D] = 0;
+    if (time > 5000)
+        bool center  = false;
+    else if
+        nMotorEncoder [motor C] = nMotorEncoder [motor D] = 0;
+        motor [motor C] = motor [motor D] = CONVSPD;
+        while (encoder < x)
+        {}
+        motor [motorC] = motor [motorD] = 0;
+    return center
+}
